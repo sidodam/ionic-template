@@ -1,0 +1,9 @@
+<ion-list>
+  <ion-item *ngFor="let curso of listaCursos" routerLink="/curso-details/{{curso.id}}">
+    <ion-label class="text-center">{{curso.nombre}}</ion-label>
+    <ion-label class="text-right">{{curso.punto}}</ion-label>
+    <ion-avatar slot="start">
+      <img src="{{curso.imagen}}">
+    </ion-avatar>
+  </ion-item>
+</ion-list>

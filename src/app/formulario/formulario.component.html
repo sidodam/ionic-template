@@ -1,0 +1,26 @@
+<form [formGroup]="myForm">
+  <ion-card-header>
+    <ion-card-title>Formulario</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+      <ion-label position="floating">Curso</ion-label>
+      <ion-input formControlName="curso"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Puntos</ion-label>
+      <ion-input formControlName="puntos"></ion-input>
+    </ion-item>
+  </ion-card-content>
+
+
+
+  <div ngClass="flex flex-row justify-end ">
+
+    <div>
+      <ion-button slot="end" (click)="addCurso()">
+        ADD
+      </ion-button>
+    </div>
+  </div>
+</form>

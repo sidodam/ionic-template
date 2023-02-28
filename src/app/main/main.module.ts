@@ -8,13 +8,17 @@ import { MainPageRoutingModule } from './main-routing.module';
 
 import { MainPage } from './main.page';
 
+import { FormularioComponent } from '../formulario/formulario.component';
+import { ListaCursosComponent } from '../lista-cursos/lista-cursos.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MainPageRoutingModule
+    MainPageRoutingModule,
+    ReactiveFormsModule,
   ],
-  declarations: [MainPage]
+  declarations: [MainPage, FormularioComponent, ListaCursosComponent],
 })
 export class MainPageModule {}

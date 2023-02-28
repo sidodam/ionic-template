@@ -13,8 +13,8 @@ import { CursoDetailsPage } from './curso-details.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    CursoDetailsPageRoutingModule
+    CursoDetailsPageRoutingModule,
   ],
-  declarations: [CursoDetailsPage]
+  declarations: [CursoDetailsPage],
 })
 export class CursoDetailsPageModule {}

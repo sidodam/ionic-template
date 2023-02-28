@@ -1,9 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>curso-details</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Curso</ion-title>
   </ion-toolbar>
-</ion-header>
 
-<ion-content>
 
-</ion-content>
+
+  <ion-card>
+    <img ngClass="m-auto object-cover h-48 w-96" src="{{curso.imagen}}" alt="Image">
+    <ion-card-header>
+      <ion-card-title> {{curso.nombre}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{curso.punto}}
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" color="danger" (click)="deleteCurso()">Delete</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>

@@ -7,13 +7,7 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
-  {
-    path: 'curso-details',
-    loadChildren: () =>
-      import('./curso-details/curso-details.module').then(
-        (m) => m.CursoDetailsPageModule
-      ),
-  },
+
   {
     path: 'home',
     loadChildren: () =>
@@ -21,10 +15,23 @@ const routes: Routes = [
   },
   {
     path: 'curso-details',
-    loadChildren: () =>
-      import('./curso-details/curso-details.module').then(
-        (m) => m.CursoDetailsPageModule
-      ),
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('./curso-details/curso-details.module').then(
+            (m) => m.CursoDetailsPageModule
+          ),
+      },
+
+      {
+        path: ':cursoId',
+        loadChildren: () =>
+          import('./curso-details/curso-details.module').then(
+            (m) => m.CursoDetailsPageModule
+          ),
+      },
+    ],
   },
 ];
 
